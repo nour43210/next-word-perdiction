@@ -1,0 +1,59 @@
+# 🔮 Next Word Prediction using R
+
+This project implements a **Next Word Prediction** system using Natural Language Processing (NLP) techniques in **R**. The goal is to predict the most likely next word based on user input, similar to features in keyboards or autocomplete systems.
+
+---
+
+## 📌 Project Overview
+
+This application analyzes large text corpora to build a statistical language model capable of predicting the next word. It uses **N-gram models (unigram, bigram, trigram, etc.)** built from preprocessed text data.
+
+---
+
+## 📂 Dataset
+
+We used the following publicly available corpora:
+- **Blogs**
+- **News**
+- **Twitter**
+
+These datasets are part of the [Capstone Dataset](https://www.coursera.org/learn/data-science-project) from the **Johns Hopkins Data Science Specialization** on Coursera.
+
+---
+
+## 🛠️ Features
+
+- Text cleaning and preprocessing (lowercasing, punctuation removal, profanity filtering)
+- N-gram tokenization (unigram, bigram, trigram, quadgram)
+- Stupid backoff algorithm for next-word prediction
+- Shiny web app interface for interactive prediction
+
+---
+
+## 📦 Technologies Used
+
+- R (Core Language)
+- `tm`, `tidytext`, `dplyr`, `stringr` (Text Processing)
+- `quanteda` (Tokenization)
+- `data.table` (Efficient Data Handling)
+- `shiny` (Web Application Interface)
+
+---
+
+## 🧪 How It Works
+
+1. **Data Cleaning:** Remove noise such as punctuation, numbers, and profanity.
+2. **Tokenization:** Generate n-gram models from cleaned data.
+3. **Prediction Algorithm:**
+   - Check for the highest order n-gram that matches the user’s input.
+   - Backoff to lower order if no match is found.
+   - Return the top probable word(s).
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/next-word-prediction-R.git
+cd next-word-prediction-R
